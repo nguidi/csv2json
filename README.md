@@ -1,4 +1,8 @@
-csv2json
-========
+# csv2json
 
-Converst csv to json (Node.js)
+ csv2json script [NodeJS](http://nodejs.org)
+ Convert csv into a json
+
+## Example
+
+    $ ./raw2json [DIR]
