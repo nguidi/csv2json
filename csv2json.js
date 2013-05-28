@@ -75,10 +75,22 @@ ensureDir(
 											).filter(
 												function(k)
 												{
-												return	_.first(k)=='_'
+													return	_.first(k)=='_'
 												}
 											)
 										)
+									_.each(
+										_.keys(record)
+									,	function(key)
+										{
+											if	(!_.isNaN(parseFloat(record[key])))
+												record[key]
+												=	parseFloat(record[key])
+											if	(_.isEqual(record[key],"true") || _.isEqual(record[key],"false"))
+												record[key]
+												=	_.isEqual(record[key],"true")
+										}
+									)
 									if(!record.id)
 										record.id=counter++
 									if(!buffer[index])
